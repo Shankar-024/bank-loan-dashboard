@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+<meta charset="UTF-8" />
+<title>🏦 Bank Loan Default Prediction Dashboard</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<style>
+/* 🌗 Theme Variables */
+:root {
+  --bg-color: linear-gradient(135deg, #0b1222, #1a2b4e);
+  --card-bg: rgba(255,255,255,0.1);
+  --text-color: #fff;
+  --accent: #00b894;
+  --shadow: rgba(0,0,0,0.4);
+}
+
+body.light {
+  --bg-color: linear-gradient(135deg, #e3f2fd, #ffffff);
+  --card-bg: rgba(0,0,0,0.05);
+  --text-color: #000;
+  --accent: #007bff;
+  --shadow: rgba(0,0,0,0.2);
+}
+
+/* 🎨 Base Styling */
+body {
+  font-family: 'Poppins', sans-serif;
+  background: var(--bg-color);
+  color: var(--text-color);
+  margin: 0;
+  display: flex;
+  overflow-x: hidden;
+  transition: background 0.6s ease, color 0.6s ease;
+}
+
+h1, h2, h3 {
+  text-align: center;
+  font-weight: 600;
+  text-shadow: 0 0 10px rgba(0,0,0,0.3);
+  margin-top: 0;
+}
+
+a { color: var(--text-color); text-decoration: none; }
+
+/* 🧭 Sidebar */
+.sidebar {
+  width: 250px;
+  background: var(--card-bg);
+  backdrop-filter: blur(10px);
+  height: 100vh;
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  padding-top: 40px;
+  box-shadow: 2px 0 10px var(--shadow);
+  transition: background 0.6s ease;
+}
+
+.sidebar a {
+  padding: 14px 20px;
+  margin: 6px 12px;
+  border-radius: 8px;
+  transition: 0.3s;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.sidebar a:hover, .sidebar a.active {
+  background: var(--accent);
+  color: white;
+  transform: scale(1.05);
+}
+
+.theme-toggle {
+  margin-top: auto;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+.toggle-btn {
+  background: var(--accent);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 15px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.toggle-btn:hover {
+  transform: scale(1.05);
+}
+.summary-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+.summary-table th, .summary-table td {
+  border: 1px solid #ccc;
+  padding: 8px;
+  text-align: center;
+}
+
+.summary-table th {
+  background-color: #007bff;
+  color: white;
+}
+
+.summary-table tr:nth-child(even) {
+  background-color: rgba(255,255,255,0.05);
+}
+
+/* 📊 Main Content */
+.content {
+  margin-left: 270px;
+  padding: 40px 20px;
+  width: calc(100% - 270px);
+  min-height: 100vh;
+}
+
+.card {
+  background: var(--card-bg);
+  border-radius: 15px;
+  padding: 35px;
+  margin: 30px auto;
+  width: 85%;
+  box-shadow: 0 0 15px var(--shadow);
+  text-align: center;
+  display: none;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.5s ease;
+  max-width: 800px;
+}
+
+.card.active {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+input, button, select {
+  padding: 10px;
+  border-radius: 6px;
+  border: none;
+  margin: 8px;
+  font-size: 15px;
+  width: 60%;
+  outline: none;
+}
+
+input[type=submit], button {
+  background: var(--accent);
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+  width: auto;
+}
+
+input[type=submit]:hover, button:hover {
+  transform: scale(1.05);
+}
+
+/* ✅ Uniform Subpage Layout */
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.result-box {
+  margin-top: 25px;
+  padding: 15px;
+  border-radius: 12px;
+  background: rgba(0,0,0,0.4);
+  color: #fff;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  text-align: center;
+}
+
+/* 📈 Summary Cards */
+.summary-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin: 20px auto;
+}
+
+.summary-item {
+  background: var(--card-bg);
+  border-radius: 12px;
+  padding: 20px 25px;
+  width: 200px;
+  text-align: center;
+  box-shadow: 0 0 15px var(--shadow);
+  transition: transform 0.3s;
+}
+
+.summary-item:hover {
+  transform: translateY(-5px);
+}
+
+/* 📊 EDA Images */
+.eda-images img {
+  width: 70%;
+  margin: 15px auto;
+  border-radius: 10px;
+  box-shadow: 0 0 15px var(--shadow);
+  display: block;
+}
+
+/* ⚙️ Metrics Table */
+table {
+  color: var(--text-color);
+  border-collapse: collapse;
+  margin: 20px auto;
+  font-size: 14px;
+  width: 80%;
+}
+
+table th, table td {
+  border: 1px solid rgba(255,255,255,0.2);
+  padding: 8px 12px;
+  text-align: center;
+}
+
+table th {
+  background: rgba(255,255,255,0.1);
+}
+
+/* 📉 Risk Meter */
+.risk-meter {
+  width: 80%;
+  height: 20px;
+  background: #2a2a2a;
+  border-radius: 10px;
+  margin: 15px auto;
+  overflow: hidden;
+}
+
+.risk-bar {
+  height: 100%;
+  border-radius: 10px;
+  transition: width 0.8s ease, background-color 0.8s ease;
+}
+
+/* 🌀 Loader */
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.7);
+  backdrop-filter: blur(5px);
+  z-index: 9999;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: #fff;
+  font-size: 18px;
+}
+
+.spinner {
+  border: 6px solid rgba(255,255,255,0.3);
+  border-top: 6px solid #00ffcc;
+  border-radius: 50%;
+  width: 60px; height: 60px;
+  animation: spin 1s linear infinite;
+  margin-bottom: 15px;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* 📱 Responsive Design */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 200px;
+  }
+  .content {
+    margin-left: 210px;
+  }
+  input, select {
+    width: 90%;
+  }
+}
+
+@media (max-width: 600px) {
+  .sidebar {
+    display: none;
+  }
+  .content {
+    margin-left: 0;
+    width: 100%;
+    padding: 20px;
+  }
+  .card {
+    width: 95%;
+    padding: 25px;
+  }
+}
+</style>
+</head>
+
+<body class="dark">
+
+<!-- 🧭 Sidebar -->
+<div class="sidebar">
+  <a href="#" class="active" data-target="predict">🧮 Prediction</a>
+  <a href="#" data-target="upload">📁 Upload Dataset</a>
+  <a href="#" data-target="eda">📊 EDA Insights</a>
+  <a href="#" data-target="metrics">📈 Model Metrics</a>
+  
+
+
+  <div class="theme-toggle">
+    <button class="toggle-btn" onclick="toggleTheme()">🌗 Toggle Theme</button>
+  </div>
+</div>
+
+<!-- 💼 Main Content -->
+<div class="content">
+  <h1>🏦 Bank Loan Default Prediction Dashboard</h1>
+
+  <!-- 🔹 Prediction -->
+  <div id="predict" class="card active">
+    <h2>Loan Default Prediction</h2>
+
+    <form action="/predict" method="post">
+      <input type="number" name="age" placeholder="Age" required><br>
+      <input type="number" name="income" placeholder="Monthly Income" required><br>
+      <input type="number" name="loan_amount" placeholder="Loan Amount" required><br>
+      <input type="number" name="loan_term_months" placeholder="Loan Term (Months)" required><br>
+      <input type="number" name="credit_score" placeholder="Credit Score" required><br>
+      <input type="number" name="existing_emis" placeholder="Existing EMIs" required><br>
+      <input type="submit" value="Predict">
+    </form>
+
+    {% if prediction_text %}
+    <div class="result-box">
+      <h3>{{ prediction_text }}</h3>
+      {% if confidence %}
+      <div class="risk-meter">
+        <div class="risk-bar"
+             style="width: {{ confidence|default(0, true) }}%; background-color: {{ risk_color|default('#999', true) }};">
+        </div>
+      </div>
+      <p><b>Confidence:</b> {{ confidence }}%</p>
+      {% endif %}
+    </div>
+    {% endif %}
+  </div>
+
+  <!-- 🔹 Upload Dataset -->
+  <div id="upload" class="card">
+    <h2>📂 Upload Dataset</h2>
+
+    <form action="/upload" method="post" enctype="multipart/form-data">
+      <input type="file" name="file" accept=".csv" required>
+      <input type="submit" value="Upload CSV">
+    </form>
+
+    <div style="margin-top: 25px;">
+      <p><b>Current Dataset:</b> {{ dataset_name }}</p>
+      <p><b>Last Updated:</b> {{ last_updated }}</p>
+    </div>
+  </div>
+
+  <!-- 🔹 EDA Insights -->
+<div id="eda" class="card">
+  <h2>📊 EDA Insights</h2>
+  
+  <div class="eda-summary" style="margin-bottom: 1.5rem;">
+    <p><b>Total Records:</b> {{ total_records }}</p>
+    <p><b>Average Income:</b> {{ avg_income }}</p>
+    <p><b>Average Credit Score:</b> {{ avg_credit }}</p>
+    <p><b>Default Rate:</b> {{ default_rate }}</p>
+    <p><b>Model Accuracy:</b> {{ accuracy }}%</p>
+    <p style="font-weight:bold; color:#00ffcc;">
+    🔁 Model Status: {{ training_status }}
+</p>
+<h3>📊 Model Accuracy Comparison</h3>
+<img src="/static/plots/accuracy_comparison.png" width="80%">
+
+  </div>
+
+  <h3 style="color: #0d6efd; text-align: center;">📋 Dataset Summary</h3>
+  <div style="overflow-x: auto; margin: 1rem 0;">
+    {{ dataset_summary|safe }}
+  </div>
+
+  <img src="/static/plots/correlation_heatmap.png" alt="Correlation Heatmap">
+  <img src="/static/plots/credit_score_dist.png" alt="Credit Score Distribution">
+  <img src="/static/plots/loan_vs_credit.png" alt="Loan vs Credit Score">
+  <img src="/static/plots/income_vs_default.png" alt="Income vs Default">
+  <img src="/static/plots/default_pie.png" alt="Default Distribution">
+</div>
+
+
+  <!-- 🔹 Model Metrics -->
+   <div id="metrics" class="card">
+    <h2>📈 Model Performance Metrics</h2>
+    <p><b>Accuracy:</b> {{ accuracy }}%</p>
+    
+    <h3>Confusion Matrix:</h3>
+    <div>{{ confusion_matrix_html|safe }}</div>
+    <h3>Classification Report:</h3>
+    <pre>{{ classification_report }}</pre>
+    
+  </div>
+</div>
+
+<!-- ⚙️ JavaScript -->
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const sidebarLinks = document.querySelectorAll(".sidebar a[data-target]");
+  const cards = document.querySelectorAll(".card");
+
+  sidebarLinks.forEach(link => {
+    link.addEventListener("click", (e) => {
+      e.preventDefault();
+      sidebarLinks.forEach(l => l.classList.remove("active"));
+      cards.forEach(c => c.classList.remove("active"));
+      link.classList.add("active");
+      const targetId = link.getAttribute("data-target");
+      const targetCard = document.getElementById(targetId);
+      if (targetCard) {
+        targetCard.classList.add("active");
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+    });
+  });
+});
+
+function toggleTheme() {
+  document.body.classList.toggle('light');
+}
+</script>
+
+</body>
+</html> 

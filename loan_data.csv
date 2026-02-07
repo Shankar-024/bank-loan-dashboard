@@ -1,0 +1,201 @@
+age,income,loan_amount,loan_term_months,credit_score,num_of_defaults,existing_emis,employment_type,education,property_area,marital_status,default
+59,74811,42220,60,611,0,7686,Self-employed,Postgraduate,Urban,Married,0
+49,27811,31646,36,306,0,4232,Salaried,Graduate,Urban,Divorced,1
+35,81250,43649,48,302,0,8007,Salaried,Graduate,Rural,Married,1
+28,97082,28049,60,662,0,1521,Salaried,Graduate,Semiurban,Married,0
+41,59754,19069,48,807,1,9018,Unemployed,Not Graduate,Urban,Married,1
+59,36411,37580,36,573,1,1500,Retired,Graduate,Rural,Single,1
+39,27911,36843,36,805,0,6737,Self-employed,Graduate,Semiurban,Single,1
+43,92270,7849,48,314,0,3294,Salaried,Not Graduate,Urban,Single,0
+31,33680,45158,12,491,1,5085,Self-employed,Postgraduate,Semiurban,Married,1
+31,96295,28289,24,784,0,2419,Salaried,Graduate,Semiurban,Married,0
+44,36111,49690,12,327,0,9126,Salaried,Graduate,Urban,Married,1
+56,62504,40257,12,338,1,3042,Salaried,Graduate,Urban,Married,1
+44,26802,14823,12,572,0,4497,Self-employed,Not Graduate,Urban,Married,1
+23,33155,46975,60,530,0,1466,Salaried,Graduate,Semiurban,Divorced,0
+42,98656,14540,36,385,0,3561,Self-employed,Not Graduate,Urban,Divorced,0
+22,64384,21364,12,773,0,614,Salaried,Not Graduate,Rural,Single,0
+44,72254,9611,36,425,0,5392,Salaried,Not Graduate,Semiurban,Single,1
+50,46918,32663,48,836,0,7693,Salaried,Graduate,Urban,Married,0
+58,85713,43646,24,444,0,9374,Salaried,Postgraduate,Semiurban,Married,1
+22,55306,35977,48,824,0,3223,Unemployed,Not Graduate,Urban,Married,1
+41,41646,34168,48,511,0,7138,Salaried,Not Graduate,Semiurban,Single,1
+53,71843,30471,60,324,0,2667,Unemployed,Graduate,Semiurban,Married,1
+32,41371,27687,24,693,2,7980,Salaried,Postgraduate,Urban,Married,1
+42,27049,5851,48,366,0,130,Self-employed,Graduate,Urban,Married,0
+45,56616,23071,48,532,0,2983,Salaried,Graduate,Urban,Married,0
+47,45932,11833,24,408,1,4278,Self-employed,Graduate,Urban,Single,0
+48,54855,16938,24,445,0,7126,Self-employed,Not Graduate,Urban,Single,0
+36,86434,40195,48,410,0,8230,Salaried,Graduate,Urban,Married,1
+35,97694,31144,24,527,0,7694,Salaried,Graduate,Rural,Divorced,1
+23,68016,9000,48,410,0,6640,Unemployed,Graduate,Urban,Single,0
+57,32400,10052,48,769,0,5468,Retired,Graduate,Urban,Married,0
+27,67642,40506,60,333,0,920,Salaried,Not Graduate,Semiurban,Married,0
+41,40151,33074,12,668,0,7564,Self-employed,Not Graduate,Urban,Married,0
+29,76407,43155,48,724,0,8684,Unemployed,Graduate,Rural,Married,1
+59,91690,45770,36,817,0,9323,Unemployed,Graduate,Semiurban,Divorced,0
+38,29499,37320,12,581,0,8502,Retired,Not Graduate,Semiurban,Married,1
+24,31295,43304,12,619,0,8930,Self-employed,Graduate,Urban,Single,1
+45,84040,8913,12,742,1,3241,Salaried,Graduate,Urban,Married,1
+34,37183,22450,60,614,0,545,Salaried,Postgraduate,Urban,Married,0
+29,54299,29107,48,676,0,4346,Salaried,Not Graduate,Rural,Married,1
+46,37874,25764,60,588,0,9996,Self-employed,Graduate,Urban,Married,1
+22,57711,48404,48,736,0,3810,Self-employed,Not Graduate,Urban,Married,0
+40,30539,25491,60,576,0,7206,Salaried,Graduate,Rural,Single,1
+48,78351,43494,60,802,0,9005,Unemployed,Not Graduate,Urban,Married,1
+27,86267,8373,36,815,0,2032,Self-employed,Graduate,Urban,Single,0
+28,73354,17161,60,649,0,8436,Salaried,Graduate,Urban,Married,0
+55,27557,36996,24,745,0,271,Salaried,Graduate,Rural,Married,1
+34,63360,32122,36,649,0,3511,Salaried,Postgraduate,Urban,Married,1
+37,27200,39850,60,436,0,1771,Salaried,Not Graduate,Semiurban,Married,1
+56,93497,32350,12,542,0,9454,Salaried,Graduate,Semiurban,Married,0
+24,71975,32472,24,842,0,4361,Salaried,Graduate,Urban,Married,0
+22,46357,33761,24,339,1,7069,Salaried,Not Graduate,Semiurban,Married,1
+26,27869,30351,24,528,0,920,Salaried,Graduate,Urban,Married,0
+24,86135,28132,36,847,1,8190,Salaried,Graduate,Urban,Married,0
+49,75108,20305,60,522,2,3430,Salaried,Postgraduate,Semiurban,Married,1
+38,63467,14817,60,305,1,4435,Self-employed,Graduate,Rural,Single,1
+46,48328,16261,12,621,1,3760,Salaried,Not Graduate,Semiurban,Single,0
+54,28987,5417,12,767,0,2050,Unemployed,Postgraduate,Semiurban,Married,0
+30,83871,46576,24,374,0,1165,Retired,Graduate,Urban,Married,1
+56,47399,25358,12,303,0,8567,Salaried,Graduate,Urban,Divorced,1
+34,71214,8267,36,417,0,2033,Salaried,Graduate,Urban,Single,1
+51,95271,22209,60,803,0,6467,Salaried,Not Graduate,Urban,Married,0
+35,69064,29052,24,740,0,145,Salaried,Postgraduate,Urban,Single,0
+28,95091,43513,12,493,0,4388,Self-employed,Not Graduate,Urban,Married,1
+34,65818,31092,36,691,0,7832,Salaried,Graduate,Urban,Married,0
+43,70525,16338,36,325,1,8623,Salaried,Not Graduate,Urban,Single,1
+41,44830,5412,12,734,0,8896,Salaried,Postgraduate,Semiurban,Married,0
+36,42429,12543,60,472,0,8173,Salaried,Not Graduate,Rural,Divorced,0
+38,31893,45355,12,599,1,2632,Self-employed,Postgraduate,Urban,Single,1
+44,72333,38496,24,625,2,4494,Salaried,Not Graduate,Rural,Married,1
+46,28436,28548,12,709,0,8056,Salaried,Not Graduate,Rural,Married,0
+45,99290,32384,36,417,1,7511,Salaried,Not Graduate,Urban,Married,1
+49,30895,49425,12,524,2,9155,Retired,Graduate,Semiurban,Married,1
+35,44738,43756,60,831,1,1828,Salaried,Graduate,Semiurban,Single,0
+21,55746,23888,48,412,0,9130,Salaried,Not Graduate,Semiurban,Married,0
+45,74377,40735,12,439,0,4805,Self-employed,Graduate,Urban,Married,1
+27,73404,22506,60,300,0,806,Salaried,Postgraduate,Semiurban,Single,1
+29,79045,25463,60,389,0,9655,Retired,Postgraduate,Urban,Married,0
+44,64790,22955,36,619,0,7486,Self-employed,Not Graduate,Semiurban,Single,0
+21,30600,42841,60,849,0,8202,Self-employed,Graduate,Semiurban,Married,0
+28,65764,10104,60,438,1,1868,Self-employed,Graduate,Semiurban,Divorced,0
+44,99543,39911,60,810,0,7878,Retired,Graduate,Semiurban,Married,0
+31,70714,28190,60,558,1,5690,Unemployed,Not Graduate,Semiurban,Married,1
+37,81835,12357,24,309,0,7827,Self-employed,Not Graduate,Urban,Married,0
+28,98744,37479,24,560,0,5429,Self-employed,Postgraduate,Urban,Married,0
+55,81491,49811,36,471,1,9076,Salaried,Graduate,Rural,Single,1
+55,43589,41208,12,312,0,3564,Salaried,Postgraduate,Urban,Single,0
+53,68484,25150,60,467,0,1389,Salaried,Postgraduate,Urban,Single,1
+25,61212,10644,12,620,1,7274,Salaried,Graduate,Urban,Married,0
+59,68525,48286,12,618,0,824,Salaried,Postgraduate,Urban,Married,1
+48,72202,7914,36,628,0,2265,Salaried,Graduate,Rural,Married,0
+27,57635,26352,60,849,1,936,Salaried,Graduate,Semiurban,Married,0
+29,88208,49912,60,718,0,6402,Self-employed,Not Graduate,Rural,Single,0
+28,58828,19397,48,394,0,3845,Unemployed,Graduate,Semiurban,Married,1
+32,43711,46555,12,617,0,1796,Salaried,Not Graduate,Urban,Married,1
+54,28420,5728,12,535,1,8245,Salaried,Not Graduate,Urban,Married,0
+53,25301,5698,24,633,0,7214,Unemployed,Not Graduate,Semiurban,Single,0
+43,70236,44954,48,675,2,726,Salaried,Graduate,Urban,Single,1
+44,91235,18923,24,758,0,2736,Self-employed,Not Graduate,Rural,Single,0
+57,79240,21779,24,436,0,1913,Salaried,Not Graduate,Rural,Married,0
+55,90726,12400,24,846,0,9788,Salaried,Not Graduate,Urban,Married,0
+42,35492,29466,36,812,2,7657,Retired,Graduate,Rural,Single,1
+47,31102,41939,36,595,0,2466,Salaried,Graduate,Rural,Single,1
+55,75336,9360,24,619,0,9041,Self-employed,Not Graduate,Semiurban,Married,0
+21,51641,40270,48,648,0,7312,Self-employed,Graduate,Urban,Single,0
+55,59584,22101,12,528,0,8194,Salaried,Not Graduate,Urban,Single,1
+57,57745,37307,48,569,0,7906,Self-employed,Not Graduate,Semiurban,Single,1
+34,48093,10486,60,590,0,4876,Retired,Not Graduate,Urban,Single,0
+23,91105,13335,36,464,0,7287,Salaried,Not Graduate,Urban,Married,1
+21,76885,26364,12,304,0,892,Unemployed,Postgraduate,Semiurban,Married,1
+25,61631,42259,12,678,0,4675,Salaried,Not Graduate,Urban,Married,1
+46,97991,28576,60,377,0,1933,Self-employed,Postgraduate,Semiurban,Single,0
+34,29014,36667,60,709,0,1380,Self-employed,Not Graduate,Rural,Single,1
+59,36093,16130,24,431,1,1290,Salaried,Graduate,Rural,Single,1
+47,43070,26972,36,341,0,1640,Unemployed,Graduate,Urban,Married,1
+29,60777,45419,36,388,0,7490,Unemployed,Not Graduate,Rural,Single,1
+35,81958,6167,48,701,1,9179,Self-employed,Graduate,Urban,Single,0
+35,35729,32192,24,595,0,1218,Self-employed,Graduate,Urban,Single,0
+46,70017,6062,24,594,1,5016,Self-employed,Graduate,Semiurban,Single,0
+33,91320,23540,24,825,0,6881,Salaried,Not Graduate,Urban,Single,0
+52,52751,29244,24,721,0,9547,Self-employed,Not Graduate,Urban,Married,0
+59,79748,26545,36,322,0,9752,Salaried,Not Graduate,Semiurban,Married,1
+52,30801,26689,36,442,0,9610,Salaried,Not Graduate,Urban,Married,1
+24,44190,16174,24,444,0,954,Self-employed,Not Graduate,Urban,Married,1
+50,74689,27925,48,524,0,9175,Salaried,Graduate,Urban,Single,1
+57,75993,42497,12,802,0,7291,Salaried,Postgraduate,Semiurban,Single,0
+43,54592,14348,12,403,0,974,Salaried,Graduate,Semiurban,Married,1
+59,35647,28714,48,338,0,4133,Salaried,Postgraduate,Urban,Married,0
+35,33716,43102,24,497,0,5370,Self-employed,Not Graduate,Urban,Single,1
+49,95316,13924,36,690,0,3972,Salaried,Graduate,Urban,Married,0
+56,27368,42098,12,478,0,5295,Self-employed,Graduate,Urban,Married,1
+33,31655,29394,60,747,0,9105,Salaried,Graduate,Semiurban,Married,0
+52,95031,11801,60,799,0,8228,Self-employed,Graduate,Urban,Married,1
+27,80766,42614,48,314,1,9903,Salaried,Graduate,Urban,Married,1
+42,38403,11731,24,588,0,3020,Salaried,Not Graduate,Semiurban,Married,0
+48,57097,28625,12,777,0,8987,Self-employed,Not Graduate,Semiurban,Married,0
+22,35966,22337,24,530,0,4036,Unemployed,Not Graduate,Semiurban,Single,1
+26,77921,40307,12,719,0,5068,Salaried,Postgraduate,Urban,Married,1
+48,74726,12056,48,456,2,5233,Salaried,Not Graduate,Urban,Single,0
+48,75300,16516,48,849,0,9516,Salaried,Not Graduate,Urban,Married,0
+40,47677,49261,60,740,0,317,Salaried,Graduate,Urban,Married,1
+50,80609,6542,24,396,0,2396,Self-employed,Not Graduate,Semiurban,Single,1
+31,81661,26677,60,710,0,2162,Salaried,Graduate,Rural,Married,0
+48,56024,44081,24,588,1,2745,Salaried,Postgraduate,Semiurban,Married,1
+45,95313,32569,60,553,0,1591,Salaried,Not Graduate,Semiurban,Married,1
+59,78006,28322,36,495,1,6183,Salaried,Not Graduate,Urban,Single,1
+53,40338,24065,36,821,0,3930,Salaried,Graduate,Semiurban,Married,0
+21,93027,22924,36,816,0,1312,Salaried,Postgraduate,Urban,Married,1
+47,44508,27556,36,417,1,9477,Salaried,Not Graduate,Semiurban,Single,1
+33,28051,31962,12,458,0,4311,Salaried,Graduate,Urban,Married,1
+23,73747,33295,36,527,2,7314,Self-employed,Graduate,Urban,Single,0
+59,79021,18807,48,515,0,2383,Salaried,Not Graduate,Urban,Single,0
+26,91412,47348,48,314,0,3239,Retired,Graduate,Rural,Divorced,0
+28,83335,31432,12,456,0,2139,Salaried,Postgraduate,Urban,Married,1
+47,81179,22749,36,560,0,1704,Self-employed,Graduate,Urban,Single,1
+29,57093,46459,36,456,0,6924,Self-employed,Graduate,Urban,Married,1
+57,94678,31256,36,346,1,362,Self-employed,Not Graduate,Semiurban,Married,1
+53,64734,45262,60,623,1,2604,Self-employed,Graduate,Semiurban,Married,1
+44,97615,42080,24,429,2,9908,Salaried,Not Graduate,Semiurban,Single,1
+35,98523,6324,60,710,0,4286,Salaried,Graduate,Urban,Married,0
+52,42019,30731,24,394,0,3738,Salaried,Graduate,Semiurban,Married,1
+52,98847,40909,36,591,0,2469,Salaried,Not Graduate,Urban,Married,0
+44,53251,28803,36,582,0,4795,Salaried,Not Graduate,Rural,Single,0
+32,50945,24870,60,368,0,6150,Salaried,Not Graduate,Semiurban,Single,1
+59,57217,39578,60,310,0,556,Self-employed,Not Graduate,Urban,Single,1
+22,33308,11588,24,553,0,9017,Salaried,Not Graduate,Urban,Married,0
+23,30949,43069,48,849,0,2808,Self-employed,Graduate,Urban,Married,0
+57,76990,31790,24,433,0,5150,Self-employed,Graduate,Urban,Single,0
+37,26150,30289,60,322,0,7561,Retired,Postgraduate,Urban,Married,1
+22,99740,33178,60,645,0,2719,Salaried,Not Graduate,Semiurban,Married,0
+22,91617,33710,12,601,0,6506,Salaried,Not Graduate,Urban,Single,0
+48,41896,20485,60,662,2,3741,Salaried,Graduate,Urban,Divorced,1
+43,71175,49482,12,695,0,9766,Salaried,Graduate,Urban,Single,1
+57,32805,25652,48,517,0,3998,Self-employed,Not Graduate,Urban,Single,0
+52,30237,9748,24,440,0,2403,Salaried,Postgraduate,Rural,Divorced,1
+53,45056,26233,24,509,1,8780,Self-employed,Not Graduate,Urban,Married,1
+21,70543,14435,12,759,2,9739,Salaried,Not Graduate,Semiurban,Married,0
+39,81556,8709,24,655,0,294,Self-employed,Not Graduate,Rural,Divorced,0
+22,28343,35355,60,623,0,5343,Self-employed,Graduate,Semiurban,Married,1
+46,38500,18116,36,432,0,9882,Salaried,Graduate,Rural,Single,1
+52,78222,30470,12,426,0,1136,Salaried,Graduate,Urban,Married,1
+26,54375,47344,24,405,2,2064,Salaried,Graduate,Rural,Married,1
+52,34662,47918,12,677,0,7009,Salaried,Postgraduate,Urban,Single,1
+24,41964,44298,12,350,0,4543,Salaried,Graduate,Urban,Single,1
+31,84638,47956,36,328,0,1007,Salaried,Not Graduate,Semiurban,Single,0
+37,98666,19683,60,761,0,5445,Salaried,Graduate,Rural,Married,0
+58,92215,5504,12,595,0,5352,Salaried,Graduate,Rural,Single,0
+44,94042,38982,24,596,2,9439,Salaried,Graduate,Urban,Married,1
+25,38284,39299,48,706,1,1435,Self-employed,Graduate,Urban,Married,0
+54,97789,33016,12,704,0,571,Salaried,Not Graduate,Rural,Married,0
+26,86389,28960,12,645,0,2382,Self-employed,Graduate,Urban,Married,0
+42,34435,38591,36,719,0,9437,Salaried,Not Graduate,Semiurban,Married,1
+31,79340,22312,60,481,0,5084,Salaried,Graduate,Rural,Single,1
+36,69078,42797,48,300,0,277,Unemployed,Graduate,Urban,Single,1
+53,76293,7105,24,670,0,7059,Salaried,Graduate,Urban,Single,0
+29,85403,41395,48,730,2,1887,Salaried,Not Graduate,Urban,Married,0
+26,54124,27700,24,608,0,1265,Salaried,Not Graduate,Urban,Single,0
+36,68919,39620,60,436,0,7491,Salaried,Graduate,Rural,Single,0
+49,60247,42678,24,501,0,1040,Salaried,Graduate,Urban,Single,1
+23,87752,25559,36,735,0,9109,Salaried,Not Graduate,Rural,Married,1
